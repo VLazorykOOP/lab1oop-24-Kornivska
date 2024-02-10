@@ -37,3 +37,6 @@ int main() {
 
     // Введення масиву B з консолі
     inputArray(B);
+    // Запис масивів у текстові файли
+    writeArrayToFile(A, "array_A.txt");
+    writeArrayToFile(B, "array_B.txt");
