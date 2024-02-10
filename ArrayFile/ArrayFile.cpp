@@ -124,6 +124,13 @@ int main() {
     else {
         std::cout << "Maximum even element before the first odd element: " << result << std::endl;
     }
+    // Запис масиву в текстовий файл
+    writeArrayToFile(A, N, "array.txt");
+
+    delete[] A; // Звільнення пам'яті, що була виділена для масиву
+    return 0;
+}
+
 
 
    
