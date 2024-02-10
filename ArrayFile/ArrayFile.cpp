@@ -87,5 +87,29 @@ void inputArray(int arr[], int size) {
     }
 }
 
+// Функція для запису масиву в текстовий файл
+void writeArrayToFile(const int arr[], int size, const std::string& filename) {
+    std::ofstream file(filename);
+    if (file.is_open()) {
+        for (int i = 0; i < size; ++i) {
+            file << arr[i] << " ";
+        }
+        file.close();
+        std::cout << "Array was successfully written to the file " << filename << std::endl;
+    }
+    else {
+        std::cerr << "Unable to open file for writing." << std::endl;
+    }
+}
+
+int main() {
+    int N;
+    std::cout << "Enter the size of the array: ";
+    std::cin >> N;
+
+    if (N <= 0) {
+        std::cerr << "Invalid size. Size must be a positive integer." << std::endl;
+        return 1;
+    }
 
    
