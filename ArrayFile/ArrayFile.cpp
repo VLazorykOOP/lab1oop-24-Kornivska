@@ -32,3 +32,8 @@ int main() {
         return 1;
     }
     std::vector<int> A(size), B(size), C(size);
+    // Введення масиву A з консолі
+    inputArray(A);
+
+    // Введення масиву B з консолі
+    inputArray(B);
