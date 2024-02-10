@@ -40,3 +40,7 @@ int main() {
     // Запис масивів у текстові файли
     writeArrayToFile(A, "array_A.txt");
     writeArrayToFile(B, "array_B.txt");
+    // Побудова масиву C, де C[i] = A[i] * B[i]
+    for (int i = 0; i < size; ++i) {
+        C[i] = A[i] * B[i];
+    }
