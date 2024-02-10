@@ -115,5 +115,15 @@ int main() {
 
     // Введення масиву з консолі
     inputArray(A, N);
+    // Знаходження максимального парного елемента перед першим непарним
+    int result = maxEvenBeforeOdd(A, N);
+
+    if (result == INT_MIN) {
+        std::cout << "There are no even elements before the first odd element." << std::endl;
+    }
+    else {
+        std::cout << "Maximum even element before the first odd element: " << result << std::endl;
+    }
+
 
    
