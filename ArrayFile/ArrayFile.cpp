@@ -111,5 +111,9 @@ int main() {
         std::cerr << "Invalid size. Size must be a positive integer." << std::endl;
         return 1;
     }
+    int* A = new int[N]; // Оголошення динамічного масиву розміру N
+
+    // Введення масиву з консолі
+    inputArray(A, N);
 
    
