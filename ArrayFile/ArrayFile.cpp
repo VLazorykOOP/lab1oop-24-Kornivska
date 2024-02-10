@@ -44,3 +44,12 @@ int main() {
     for (int i = 0; i < size; ++i) {
         C[i] = A[i] * B[i];
     }
+    // Виведення масиву C на консоль
+    std::cout << "Масив C, де C[i] = A[i] * B[i]: ";
+    for (int i = 0; i < size; ++i) {
+        std::cout << C[i] << " ";
+    }
+    std::cout << std::endl;
+
+    return 0;
+}
