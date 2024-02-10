@@ -79,6 +79,13 @@ int maxEvenBeforeOdd(const int arr[], int size) {
 
     return maxEven;
 }
+// Функція для введення масиву з консолі
+void inputArray(int arr[], int size) {
+    std::cout << "Enter " << size << " elements:\n";
+    for (int i = 0; i < size; ++i) {
+        std::cin >> arr[i];
+    }
+}
 
 
    
