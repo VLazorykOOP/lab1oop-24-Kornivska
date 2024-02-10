@@ -22,3 +22,12 @@ void writeArrayToFile(const std::vector<int>& arr, const std::string& filename) 
         std::cerr << "Error" << std::endl;
     }
 }
+int main() {
+    int size;
+    std::cout << "Введіть розмір масиву: ";
+    std::cin >> size;
+
+    if (size <= 0) {
+        std::cerr << "Невірний розмір. Розмір має бути додатнім цілим числом." << std::endl;
+        return 1;
+    }
