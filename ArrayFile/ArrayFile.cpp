@@ -24,10 +24,11 @@ void writeArrayToFile(const std::vector<int>& arr, const std::string& filename) 
 }
 int main() {
     int size;
-    std::cout << "Введіть розмір масиву: ";
+    std::cout << "Enter array: ";
     std::cin >> size;
 
     if (size <= 0) {
-        std::cerr << "Невірний розмір. Розмір має бути додатнім цілим числом." << std::endl;
+        std::cerr << "Error" << std::endl;
         return 1;
     }
+    std::vector<int> A(size), B(size), C(size);
