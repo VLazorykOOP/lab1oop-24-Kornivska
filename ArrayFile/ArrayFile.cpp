@@ -3,8 +3,22 @@
 #include <vector>
 // Функція для введення масиву з консолі
 void inputArray(std::vector<int>& arr) {
-    std::cout << "Введіть " << arr.size() << " цілих чисел:\n";
+    std::cout << "Enter " << arr.size() << " elements:\n";
     for (int i = 0; i < arr.size(); ++i) {
         std::cin >> arr[i];
+    }
+}
+// Функція для запису масиву в текстовий файл
+void writeArrayToFile(const std::vector<int>& arr, const std::string& filename) {
+    std::ofstream file(filename);
+    if (file.is_open()) {
+        for (int i = 0; i < arr.size(); ++i) {
+            file << arr[i] << " ";
+        }
+        file.close();
+        std::cout << "Array is written " << filename << std::endl;
+    }
+    else {
+        std::cerr << "Error" << std::endl;
     }
 }
