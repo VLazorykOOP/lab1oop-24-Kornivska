@@ -1,6 +1,9 @@
-﻿#include <iostream>
+﻿/*#include <iostream>
 #include <fstream>
 #include <vector>
+
+
+
 // Функція для введення масиву з консолі
 void inputArray(std::vector<int>& arr) {
     std::cout << "Enter " << arr.size() << " elements:\n";
@@ -45,11 +48,37 @@ int main() {
         C[i] = A[i] * B[i];
     }
     // Виведення масиву C на консоль
-    std::cout << "Масив C, де C[i] = A[i] * B[i]: ";
+    std::cout << "Array C, where C[i] = A[i] * B[i]: ";
     for (int i = 0; i < size; ++i) {
         std::cout << C[i] << " ";
     }
     std::cout << std::endl;
 
+
     return 0;
+}*/
+
+#include <iostream>
+#include <fstream>
+#include <climits>
+
+// Функція для знаходження максимального парного елемента перед першим непарним
+int maxEvenBeforeOdd(const int arr[], int size) {
+    int maxEven = INT_MIN; // Початкове значення максимального парного елемента
+    bool foundOdd = false; // Флаг, який показує, чи був знайдений перший непарний елемент
+    for (int i = 0; i < size; ++i) {
+        if (arr[i] % 2 == 0) { // Перевіряємо, чи є елемент парним
+            if (!foundOdd) {
+                maxEven = std::max(maxEven, arr[i]); // Оновлюємо максимальний парний елемент, якщо ще не знайдений непарний
+            }
+        }
+        else {
+            foundOdd = true; // Знайшли перший непарний елемент
+        }
+    }
+
+    return maxEven;
 }
+
+
+   
